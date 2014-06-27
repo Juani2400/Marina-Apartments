@@ -671,6 +671,14 @@ var/list/ghostteleportlocs = list()
 	name = "House #16"
 	icon_state = "fpmaint"
 
+/area/apartments/house_17
+	name = "House #17"
+	icon_state = "fpmaint"
+
+/area/apartments/house_18
+	name = "House #18"
+	icon_state = "fpmaint"
+
 /area/apartments/pub
 	name = "Pub"
 	icon_state = "fpmaint"

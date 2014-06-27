@@ -100,6 +100,11 @@
 	desc = "A warning sign which reads 'HARD VACUUM AHEAD'."
 	icon_state = "space"
 
+/obj/structure/sign/tank
+	name = "\improper DO NOT DAMAGE AIR TANKS"
+	desc = "A warning sign which reads 'DO NOT DAMAGE AIR TANKS. This could cause an overhelming damage and immediate death.'."
+	icon_state = "tank"
+
 /obj/structure/sign/deathsposal
 	name = "\improper DISPOSAL LEADS TO SPACE"
 	desc = "A warning sign which reads 'DISPOSAL LEADS TO SPACE'."
@@ -201,19 +206,19 @@
 	icon_state = "direction_evac"
 
 /obj/structure/sign/directions/onetofive
-	name = "\improper Houses 1 - 5"
-	desc = "A direction sign, pointing out the direction of row of houses from One to Five."
+	name = "\improper 'Amarillo Hallway' (A)"
+	desc = "A direction sign, pointing out the direction of the Hallway 'A'."
 	icon_state = "direction_onetofive"
 
 /obj/structure/sign/directions/sixtonine
-	name = "\improper Houses 6 - 9"
-	desc = "A direction sign, pointing out the direction of row of houses from Six to Nine."
+	name = "\improper 'Blue Hallway' (B)"
+	desc = "A direction sign, pointing out the direction of the Hallway 'B'."
 	icon_state = "direction_sixtonine"
 
-/obj/structure/sign/directions/tentosixteen
-	name = "\improper Houses 10 - 16"
-	desc = "A direction sign, pointing out the direction of row of houses from Ten to Sixteen."
-	icon_state = "direction_tentosixteen"
+/obj/structure/sign/directions/tentoeighteen
+	name = "\improper 'Calabaza Hallway' (C)"
+	desc = "A direction sign, pointing out the direction of the Hallway 'C'."
+	icon_state = "direction_tentoeighteen"
 
 /obj/structure/sign/directions/meeting
 	name = "\improper Meeting Room"
@@ -235,22 +240,138 @@
 	desc = "A direction sign, pointing out which way the Community Hydroponics is."
 	icon_state = "direction_hydroponics"
 
+/obj/structure/sign/directions/pool
+	name = "\improper Pool"
+	desc = "A direction sign, pointing out which way the Pool is."
+	icon_state = "direction_pool"
+
+/obj/structure/sign/directions/holodeck
+	name = "\improper Holodeck"
+	desc = "A direction sign, pointing out which way the Holodeck is."
+	icon_state = "direction_holodeck"
+
 /obj/structure/sign/hallwaysigns/hallway_a
 	name = "\improper 'Amarillo' (A) Hallway"
-	desc = "A sign which shows in which hallway you are. This one shows 'A'"
+	desc = "A sign which shows in which hallway you are. This one shows 'A'."
 	icon_state = "hallway_a"
 
 /obj/structure/sign/hallwaysigns/hallway_b
 	name = "\improper 'Blue' (B) Hallway"
-	desc = "A sign which shows in which hallway you are. This one shows 'B'"
+	desc = "A sign which shows in which hallway you are. This one shows 'B'."
 	icon_state = "hallway_b"
 
 /obj/structure/sign/hallwaysigns/hallway_c
 	name = "\improper 'Calabaza' (C) Hallway"
-	desc = "A sign which shows in which hallway you are. This one shows 'C'"
+	desc = "A sign which shows in which hallway you are. This one shows 'C'."
 	icon_state = "hallway_c"
 
 /obj/structure/sign/ads_monitor
 	name = "\improper Advertising Monitor"
 	desc = "A NT advertising monitor."
 	icon_state = "ads_monitor"
+
+/obj/structure/sign/apartment/apartment_1a
+	name = "\improper Apartment A-01"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_1a"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_2a
+	name = "\improper Apartment A-02"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_2a"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_3a
+	name = "\improper Apartment A-03"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_3a"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_4a
+	name = "\improper Apartment A-04"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_4a"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_5a
+	name = "\improper Apartment A-05"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_5a"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_1b
+	name = "\improper Apartment B-01"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_1b"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_2b
+	name = "\improper Apartment B-02"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_2b"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_3b
+	name = "\improper Apartment B-03"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_3b"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_4b
+	name = "\improper Apartment B-04"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_4b"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_1c
+	name = "\improper Apartment C-01"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_1c"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_2c
+	name = "\improper Apartment C-02"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_2c"
+	pixel_y = -32
+
+/obj/structure/sign/apartment/apartment_3c
+	name = "\improper Apartment C-03"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_3c"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_4c
+	name = "\improper Apartment C-04"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_4c"
+	pixel_y = -32
+
+/obj/structure/sign/apartment/apartment_5c
+	name = "\improper Apartment C-05"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_5c"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_6c
+	name = "\improper Apartment C-06"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_6c"
+	pixel_y = -32
+
+/obj/structure/sign/apartment/apartment_7c
+	name = "\improper Apartment C-07"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_7c"
+	pixel_y = -32
+
+/obj/structure/sign/apartment/apartment_8c
+	name = "\improper Apartment C-08"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_8c"
+
+/obj/structure/sign/apartment/apartment_9c
+	name = "\improper Apartment C-09"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_9c"

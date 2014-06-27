@@ -22,7 +22,7 @@ var/const/BLOOD_VOLUME_SURVIVE = 122
 	if(species && species.flags & NO_BLOOD) //We want the var for safety but we can do without the actual blood.
 		return
 
-	vessel.add_reagent("blood",560)
+	vessel.add_reagent("blood",560) //https://static1.e621.net/data/90/06/90065598c5939985ae56b8fcfd6f5a51.jpg -For posterity.
 	spawn(1)
 		fixblood()
 

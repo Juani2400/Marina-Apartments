@@ -577,6 +577,42 @@
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 
+/obj/item/toy/sexual/knottydildo1
+	name = "Red knotty Dildo"
+	desc = "A dildo, with knots. And, it's red."
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "knottydildo1"
+
+/obj/item/toy/sexual/knottydildo2
+	name = "Purple knotty Dildo"
+	desc = "A dildo, with knots. And, it's purple."
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "knottydildo2"
+
+/obj/item/toy/sexual/knottydildo3
+	name = "Green knotty Dildo"
+	desc = "A dildo, with knots. And, it's green."
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "knottydildo3"
+
+/obj/item/toy/sexual/barbsdildo
+	name = "Strange Dildo"
+	desc = "A strange purple dildo, with some barbs."
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "barbsdildo"
+
+/obj/item/toy/sexual/lubebottle
+	name = "Lube Bottle"
+	desc = "A bottle, with lube inside. Do I need to tell you what is it used for...?"
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "lubebottle"
+
+/obj/item/toy/sexual/condom
+	name = "Straberry flavoured condom"
+	desc = "A condom, with flavour"
+	icon = 'icons/obj/secret.dmi'
+	icon_state = "strawberrycondom"
+
 /* NYET.
 /obj/item/weapon/toddler
 	icon_state = "toddler"

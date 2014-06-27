@@ -103,14 +103,14 @@
 /obj/structure/stool/bed/chair/comfy/teal
 	icon_state = "comfychair_teal"
 
-/obj/structure/stool/bed/chair/office
-	anchored = 0
-
 /obj/structure/stool/bed/chair/comfy/black
 	icon_state = "comfychair_black"
 
 /obj/structure/stool/bed/chair/comfy/lime
 	icon_state = "comfychair_lime"
+
+/obj/structure/stool/bed/chair/office
+	anchored = 0
 
 /obj/structure/stool/bed/chair/office/Move()
 	..()
@@ -127,3 +127,38 @@
 
 /obj/structure/stool/bed/chair/office/dark
 	icon_state = "officechair_dark"
+
+/obj/structure/stool/bed/chair/couch
+	name = "Couch"
+	desc = "A big comfy chair! Now, all the family can seat together!"
+
+/obj/structure/stool/bed/chair/couch/black_1
+	icon_state = "couchblack1"
+
+/obj/structure/stool/bed/chair/couch/black_2
+	icon_state = "couchblack2"
+
+/obj/structure/stool/bed/chair/couch/beige_1
+	icon_state = "couchbeige1"
+
+/obj/structure/stool/bed/chair/couch/beige_2
+	icon_state = "couchbeige2"
+
+/obj/structure/stool/bed/chair/couch/lime_1
+	icon_state = "couchlime1"
+
+/obj/structure/stool/bed/chair/couch/lime_2
+	icon_state = "couchlime2"
+
+/obj/structure/stool/bed/chair/couch/brown_1
+	icon_state = "couchbrown1"
+
+/obj/structure/stool/bed/chair/couch/brown_2
+	icon_state = "couchbrown2"
+
+/obj/structure/stool/bed/chair/couch/teal_1
+	icon_state = "couchteal1"
+
+/obj/structure/stool/bed/chair/couch/teal_2
+	icon_state = "couchteal2"
+

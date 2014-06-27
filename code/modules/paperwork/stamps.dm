@@ -59,6 +59,11 @@
 	icon_state = "stamp-intaff"
 	item_color = "intaff"
 
+/obj/item/weapon/stamp/custom_bourbon
+	name = "CCIA S.S - Rank 2 - Remus rubber stamp"
+	icon_state = "stamp-hos"
+	item_color = "hos"
+
 /obj/item/weapon/stamp/marina_apartments
 	name = "Marina Apartments Administration rubber stamp"
 	icon_state = "stamp-marina"
