@@ -14,11 +14,11 @@ proc/move_research_shuttle()
 		var/area/fromArea
 		var/area/toArea
 		if (research_shuttle_location == 1)
-			fromArea = locate(/area/shuttle/research/outpost)
-			toArea = locate(/area/shuttle/research/station)
+			fromArea = locate(/area/shuttle/marina/transport/centcom)
+			toArea = locate(/area/shuttle/marina/transport/station)
 		else
-			fromArea = locate(/area/shuttle/research/station)
-			toArea = locate(/area/shuttle/research/outpost)
+			fromArea = locate(/area/shuttle/marina/transport/station)
+			toArea = locate(/area/shuttle/marina/transport/centcom)
 
 
 		var/list/dstturfs = list()
@@ -61,7 +61,7 @@ proc/move_research_shuttle()
 	return
 
 /obj/machinery/computer/research_shuttle
-	name = "Research Shuttle Console"
+	name = "Apartments Transport Shuttle"
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "shuttle"
 	req_access = list(access_research)

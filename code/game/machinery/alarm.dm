@@ -109,6 +109,16 @@
 	TLV["temperature"] =	list(20, 40, 140, 160) // K
 	target_temperature = 90
 
+/obj/machinery/alarm/sauna/New()
+	..()
+	req_access = list(access_rd, access_atmospherics, access_engine_equip)
+	TLV["oxygen"] =			list(16, 19, 135, 140) // Partial pressure, kpa
+	TLV["carbon dioxide"] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
+	TLV["plasma"] =			list(-1.0, -1.0, 0.2, 0.5) // Partial pressure, kpa
+	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
+	TLV["pressure"] =		list(ONE_ATMOSPHERE*0.80,ONE_ATMOSPHERE*0.90,ONE_ATMOSPHERE*1.30,ONE_ATMOSPHERE*1.40) /* kpa */
+	TLV["temperature"] =	list(T0C-26, T0C, T0C+60, T0C+70) // K
+	target_temperature = 343.15
 
 /obj/machinery/alarm/New(var/loc, var/dir, var/building = 0)
 	..()

@@ -175,6 +175,11 @@
 	desc = "A warning sign which reads 'CHEMISTRY'."
 	icon_state = "chemistry1"
 
+/obj/structure/sign/doors
+	name = "\improper CLOSE DOORS BEHIND YOU"
+	desc = "A warning sign which reads 'CLOSE DOORS BEHIND YOU'."
+	icon_state = "doors"
+
 /obj/structure/sign/botany
 	name = "\improper HYDROPONICS"
 	desc = "A warning sign which reads 'HYDROPONICS'."
@@ -265,10 +270,55 @@
 	desc = "A sign which shows in which hallway you are. This one shows 'C'."
 	icon_state = "hallway_c"
 
+/obj/structure/sign/hallwaysigns/hallway_d
+	name = "\improper 'Dusty Rose' (D) Hallway"
+	desc = "A sign which shows in which hallway you are. This one shows 'D'."
+	icon_state = "hallway_d"
+
+/obj/structure/sign/hallwaysigns/marina_left
+	name = "\improper Marina Apartments"
+	desc = "Where your dreams come true!."
+	icon_state = "marinasignleft"
+
+/obj/structure/sign/hallwaysigns/marina_middle
+	name = "\improper Marina Apartments"
+	desc = "Where your dreams come true!."
+	icon_state = "marinasignmiddle"
+
+/obj/structure/sign/hallwaysigns/marina_right
+	name = "\improper Marina Apartments"
+	desc = "Where your dreams come true!."
+	icon_state = "marinasignright"
+
+/obj/structure/sign/hallwaysigns/sauna_right
+	name = "\improper Sauna"
+	desc = "This sign indicates this is the Sauna."
+	icon_state = "saunaright"
+
+/obj/structure/sign/hallwaysigns/sauna_left
+	name = "\improper Sauna"
+	desc = "This sign indicates this is the Sauna."
+	icon_state = "saunaleft"
+
+/obj/structure/sign/hallwaysigns/sauna_men
+	name = "\improper Male Changing Room"
+	desc = "This is where males should change their clothes."
+	icon_state = "saunamen"
+
+/obj/structure/sign/hallwaysigns/sauna_women
+	name = "\improper Female Changing Room"
+	desc = "This is where females should change their clothes."
+	icon_state = "saunawomen"
+
 /obj/structure/sign/ads_monitor
 	name = "\improper Advertising Monitor"
 	desc = "A NT advertising monitor."
 	icon_state = "ads_monitor"
+
+/obj/structure/sign/ads_monitor2
+	name = "\improper Advertising Monitor"
+	desc = "A NT advertising monitor."
+	icon_state = "ads_monitor2"
 
 /obj/structure/sign/apartment/apartment_1a
 	name = "\improper Apartment A-01"
@@ -375,3 +425,51 @@
 	name = "\improper Apartment C-09"
 	desc = "A sign which shows the number and hallway of the apartment."
 	icon_state = "apartment_9c"
+
+/obj/structure/sign/apartment/apartment_1d
+	name = "\improper Apartment D-01"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_1d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_2d
+	name = "\improper Apartment D-02"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_2d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_3d
+	name = "\improper Apartment D-03"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_3d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_4d
+	name = "\improper Apartment D-04"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_4d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_5d
+	name = "\improper Apartment D-05"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_5d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_6d
+	name = "\improper Apartment D-06"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_6d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_7d
+	name = "\improper Apartment D-07"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_7d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_8d
+	name = "\improper Apartment D-08"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_8d"
+	pixel_y = 32

@@ -302,6 +302,28 @@ var/list/ghostteleportlocs = list()
 	icon_state = "yellow"
 	requires_power = 0
 
+/area/shuttle/marina/transport
+	name = "\improper Marina Transport Shuttle"
+	icon_state = "shuttle"
+
+area/shuttle/marina/transport/station
+	icon_state = "shuttle2"
+
+/area/shuttle/marina/transport/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/marina/elevator
+	name = "\improper Marina elevator"
+	icon_state = "shuttle"
+
+area/shuttle/marina/elevator/groundfloor
+	icon_state = "shuttle2"
+	music = "music/lift.wav"
+
+/area/shuttle/marina/elevator/upperfloor
+	icon_state = "shuttle"
+	music = "music/lift.wav"
+
 /area/airtunnel1/      // referenced in airtunnel.dm:759
 
 /area/dummy/           // Referenced in engine.dm:261
@@ -679,6 +701,42 @@ var/list/ghostteleportlocs = list()
 	name = "House #18"
 	icon_state = "fpmaint"
 
+/area/apartments/house_1d
+	name = "House D-01"
+	icon_state = "fpmaint"
+
+/area/apartments/house_2d
+	name = "House D-02"
+	icon_state = "fpmaint"
+
+/area/apartments/house_3d
+	name = "House D-03"
+	icon_state = "fpmaint"
+
+/area/apartments/house_4d
+	name = "House D-04"
+	icon_state = "fpmaint"
+
+/area/apartments/house_5d
+	name = "House D-05"
+	icon_state = "fpmaint"
+
+/area/apartments/house_6d
+	name = "House D-06"
+	icon_state = "fpmaint"
+
+/area/apartments/house_7d
+	name = "House D-07"
+	icon_state = "fpmaint"
+
+/area/apartments/house_8d
+	name = "House D-08"
+	icon_state = "fpmaint"
+
+/area/apartments/sauna
+	name = "Sauna"
+	icon_state = "fpmaint"
+
 /area/apartments/pub
 	name = "Pub"
 	icon_state = "fpmaint"
@@ -709,6 +767,10 @@ var/list/ghostteleportlocs = list()
 
 /area/apartments/mid_hallway
 	name = "Center Hallway"
+	icon_state = "fpmaint"
+
+/area/apartments/aft_secd_hallway
+	name = "Second Deck Aft Hallway"
 	icon_state = "fpmaint"
 
 
