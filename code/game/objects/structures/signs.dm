@@ -255,6 +255,16 @@
 	desc = "A direction sign, pointing out which way the Holodeck is."
 	icon_state = "direction_holodeck"
 
+/obj/structure/sign/directions/sauna
+	name = "\improper Sauna"
+	desc = "A direction sign, pointing out which way the Sauna is."
+	icon_state = "direction_sauna"
+
+/obj/structure/sign/directions/dhallway
+	name = "\improper 'Dusty Rose Hallway' (D)"
+	desc = "A direction sign, pointing out the direction of the hallway 'D'."
+	icon_state = "direction_dhallway"
+
 /obj/structure/sign/hallwaysigns/hallway_a
 	name = "\improper 'Amarillo' (A) Hallway"
 	desc = "A sign which shows in which hallway you are. This one shows 'A'."
@@ -425,6 +435,18 @@
 	name = "\improper Apartment C-09"
 	desc = "A sign which shows the number and hallway of the apartment."
 	icon_state = "apartment_9c"
+
+/obj/structure/sign/apartment/apartment_10c
+	name = "\improper Apartment C-10"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_10c"
+	pixel_x = 32
+
+/obj/structure/sign/apartment/apartment_11c
+	name = "\improper Apartment C-11"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_11c"
+	pixel_x = 32
 
 /obj/structure/sign/apartment/apartment_1d
 	name = "\improper Apartment D-01"

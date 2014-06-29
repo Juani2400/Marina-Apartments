@@ -701,6 +701,14 @@ area/shuttle/marina/elevator/groundfloor
 	name = "House #18"
 	icon_state = "fpmaint"
 
+/area/apartments/house_19
+	name = "House #19"
+	icon_state = "fpmaint"
+
+/area/apartments/house_20
+	name = "House #20"
+	icon_state = "fpmaint"
+
 /area/apartments/house_1d
 	name = "House D-01"
 	icon_state = "fpmaint"
@@ -731,6 +739,10 @@ area/shuttle/marina/elevator/groundfloor
 
 /area/apartments/house_8d
 	name = "House D-08"
+	icon_state = "fpmaint"
+
+/area/apartments/sauna_lobby
+	name = "Sauna lobby"
 	icon_state = "fpmaint"
 
 /area/apartments/sauna

@@ -162,3 +162,9 @@
 /obj/structure/stool/bed/chair/couch/teal_2
 	icon_state = "couchteal2"
 
+/obj/structure/stool/bed/chair/couch/saunabench1
+	icon_state = "saunabench1"
+
+/obj/structure/stool/bed/chair/couch/saunabench2
+	icon_state = "saunabench2"
+

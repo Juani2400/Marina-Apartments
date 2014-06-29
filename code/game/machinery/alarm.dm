@@ -117,7 +117,7 @@
 	TLV["plasma"] =			list(-1.0, -1.0, 0.2, 0.5) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE*0.80,ONE_ATMOSPHERE*0.90,ONE_ATMOSPHERE*1.30,ONE_ATMOSPHERE*1.40) /* kpa */
-	TLV["temperature"] =	list(T0C-26, T0C, T0C+60, T0C+70) // K
+	TLV["temperature"] =	list(T0C-26, T0C, T0C+75, T0C+80) // K
 	target_temperature = 343.15
 
 /obj/machinery/alarm/New(var/loc, var/dir, var/building = 0)
