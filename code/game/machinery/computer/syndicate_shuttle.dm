@@ -2,9 +2,10 @@
 #define SYNDICATE_SHUTTLE_COOLDOWN 200
 
 /obj/machinery/computer/syndicate_station
-	name = "syndicate shuttle terminal"
+	name = "Lift Control Panel"
 	icon = 'icons/obj/computer.dmi'
-	icon_state = "syndishuttle"
+	icon_state = "elevatorbuttons"
+	density = 0
 	var/area/curr_location
 	var/moving = 0
 	var/lastMove = 0
