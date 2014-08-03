@@ -30,6 +30,11 @@
 	name = "surgery holosign"
 	desc = "Small wall-mounted holographic projector. This one reads SURGERY."
 	on_icon = "surgery"
+
+/obj/machinery/holosign/closed_sign
+	name = "Closed!"
+	desc = "A small sign that reads: 'Closed! We apologize for the inconvenience!'."
+	on_icon = "closed"
 ////////////////////SWITCH///////////////////////////////////////
 
 /obj/machinery/holosign_switch

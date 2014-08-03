@@ -185,6 +185,26 @@
 	desc = "A warning sign which reads 'HYDROPONICS'."
 	icon_state = "hydro1"
 
+/obj/structure/sign/stores/bistro
+	name = "\improper Carol's Bistro!"
+	desc = "Hungry? Just come and ask for a take-away meal!"
+	icon_state = "bistro"
+
+/obj/structure/sign/stores/clinic
+	name = "\improper Coldwell's Clinic!"
+	desc = "Feeling unhealthy? Dr. Coldwell has the solution!"
+	icon_state = "clinic"
+
+/obj/structure/sign/stores/veggies
+	name = "\improper David's Veggies"
+	desc = "Making parent's delight and children's nightmares since 2569!"
+	icon_state = "veggies"
+
+/obj/structure/sign/stores/bakery
+	name = "\improper The Candy Shoppe."
+	desc = "Your greatest bakery all accross the galaxy! Now with more sweets and 'Candis'!"
+	icon_state = "bakery"
+
 /obj/structure/sign/directions/science
 	name = "\improper Science department"
 	desc = "A direction sign, pointing out which way the Science department is."
@@ -211,7 +231,7 @@
 	icon_state = "direction_evac"
 
 /obj/structure/sign/directions/onetofive
-	name = "\improper 'Amarillo Hallway' (A)"
+	name = "\improper 'Pasillo Amarillo' (A)"
 	desc = "A direction sign, pointing out the direction of the Hallway 'A'."
 	icon_state = "direction_onetofive"
 
@@ -221,7 +241,7 @@
 	icon_state = "direction_sixtonine"
 
 /obj/structure/sign/directions/tentoeighteen
-	name = "\improper 'Calabaza Hallway' (C)"
+	name = "\improper 'Pasillo Calabaza' (C)"
 	desc = "A direction sign, pointing out the direction of the Hallway 'C'."
 	icon_state = "direction_tentoeighteen"
 
@@ -265,6 +285,16 @@
 	desc = "A direction sign, pointing out the direction of the hallway 'D'."
 	icon_state = "direction_dhallway"
 
+/obj/structure/sign/directions/ehallway
+	name = "\improper 'Pasillo Esmeralda' (E)"
+	desc = "A direction sign, pointing out the direction of the hallway 'E'."
+	icon_state = "direction_ehallway"
+
+/obj/structure/sign/directions/market
+	name = "\improper Market"
+	desc = "A direction sign, pointing out the direction of the Market."
+	icon_state = "direction_market"
+
 /obj/structure/sign/hallwaysigns/hallway_a
 	name = "\improper 'Amarillo' (A) Hallway"
 	desc = "A sign which shows in which hallway you are. This one shows 'A'."
@@ -284,6 +314,11 @@
 	name = "\improper 'Dusty Rose' (D) Hallway"
 	desc = "A sign which shows in which hallway you are. This one shows 'D'."
 	icon_state = "hallway_d"
+
+/obj/structure/sign/hallwaysigns/hallway_e
+	name = "\improper 'Esmeralda' (E) Hallway"
+	desc = "A sign which shows in which hallway you are. This one shows 'E'."
+	icon_state = "hallway_e"
 
 /obj/structure/sign/hallwaysigns/marina_left
 	name = "\improper Marina Apartments"
@@ -494,4 +529,28 @@
 	name = "\improper Apartment D-08"
 	desc = "A sign which shows the number and hallway of the apartment."
 	icon_state = "apartment_8d"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_1e
+	name = "\improper Apartment E-01"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_1e"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_2e
+	name = "\improper Apartment E-02"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_2e"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_3e
+	name = "\improper Apartment E-03"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_3e"
+	pixel_y = 32
+
+/obj/structure/sign/apartment/apartment_4e
+	name = "\improper Apartment E-04"
+	desc = "A sign which shows the number and hallway of the apartment."
+	icon_state = "apartment_4e"
 	pixel_y = 32

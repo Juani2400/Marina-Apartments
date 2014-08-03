@@ -741,6 +741,22 @@ area/shuttle/marina/elevator/groundfloor
 	name = "House D-08"
 	icon_state = "fpmaint"
 
+/area/apartments/house_1e
+	name = "House E-01"
+	icon_state = "fpmaint"
+
+/area/apartments/house_2e
+	name = "House E-02"
+	icon_state = "fpmaint"
+
+/area/apartments/house_3e
+	name = "House E-03"
+	icon_state = "fpmaint"
+
+/area/apartments/house_4e
+	name = "House E-04"
+	icon_state = "fpmaint"
+
 /area/apartments/sauna_lobby
 	name = "Sauna lobby"
 	icon_state = "fpmaint"
@@ -784,6 +800,12 @@ area/shuttle/marina/elevator/groundfloor
 /area/apartments/aft_secd_hallway
 	name = "Second Deck Aft Hallway"
 	icon_state = "fpmaint"
+
+/area/apartments/cent_secd_hallway
+	name = "Second Deck Central Hallway"
+	icon_state = "fpmaint"
+
+
 
 
 

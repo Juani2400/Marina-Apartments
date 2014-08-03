@@ -34,7 +34,6 @@
 	moving = 0
 	return 1
 
-
 /obj/machinery/computer/syndicate_station/attackby(obj/item/I as obj, mob/user as mob)
 	return attack_hand(user)
 
