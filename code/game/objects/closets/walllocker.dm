@@ -11,6 +11,16 @@
 	icon_closed = "wall-locker"
 	icon_opened = "wall-lockeropen"
 
+/obj/structure/closet/liftlocker
+	desc = "A wall mounted storage with some lift-related emergencies in it."
+	name = "Lift Emergency Equipment"
+	icon = 'icons/obj/walllocker.dmi'
+	icon_state = "lift-locker"
+	density = 0
+	anchored = 1
+	icon_closed = "lift-locker"
+	icon_opened = "wall-lockeropen"
+
 //spawns endless (3 sets) amounts of breathmask, emergency oxy tank and crowbar
 
 /obj/structure/closet/walllocker/emerglocker
