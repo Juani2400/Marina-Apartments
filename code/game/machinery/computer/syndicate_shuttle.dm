@@ -55,7 +55,7 @@
 	<a href='?src=\ref[src];groundfloor=1'>Ground floor</a><br>
 	<a href='?src=\ref[src];upperfloor=1'>Upper floor</a>"}
 
-	user << browse(dat, "window=computer;size=575x450")
+	user << browse(dat, "window=computer;size=238x144")
 	onclose(user, "computer")
 	return
 
@@ -68,8 +68,10 @@
 		user.set_machine(src)
 
 	if(href_list["groundfloor"])
+		playsound(src.loc, 'sound/music/lift.ogg', 30, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/groundfloor)
 	else if(href_list["upperfloor"])
+		playsound(src.loc, 'sound/music/lift.ogg', 30, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/upperfloor)
 
 	add_fingerprint(usr)
