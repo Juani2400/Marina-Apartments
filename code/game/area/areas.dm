@@ -311,6 +311,7 @@
 				if(L.&& L.client)
 					L.client.played = 0
 
+
 /area/proc/gravitychange(var/gravitystate = 0, var/area/A)
 
 	A.has_gravity = gravitystate

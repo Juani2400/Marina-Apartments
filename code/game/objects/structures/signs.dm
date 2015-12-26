@@ -101,8 +101,8 @@
 	icon_state = "space"
 
 /obj/structure/sign/tank
-	name = "\improper DO NOT DAMAGE AIR TANKS"
-	desc = "A warning sign which reads 'DO NOT DAMAGE AIR TANKS. This could cause an overhelming damage and immediate death.'."
+	name = "\improper Breathing Air Reserve"
+	desc = "A warning sign that reads 'Breathing Air Reserve. Plese do not damage the air tanks, as this could provoke an instant death due to pressure if broken'."
 	icon_state = "tank"
 
 /obj/structure/sign/deathsposal

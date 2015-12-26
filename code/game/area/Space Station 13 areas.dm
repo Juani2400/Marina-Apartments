@@ -318,11 +318,9 @@ area/shuttle/marina/transport/station
 
 area/shuttle/marina/elevator/groundfloor
 	icon_state = "shuttle2"
-	music = "music/lift.wav"
 
 /area/shuttle/marina/elevator/upperfloor
 	icon_state = "shuttle"
-	music = "music/lift.wav"
 
 /area/airtunnel1/      // referenced in airtunnel.dm:759
 
@@ -803,6 +801,10 @@ area/shuttle/marina/elevator/groundfloor
 
 /area/apartments/cent_secd_hallway
 	name = "Second Deck Central Hallway"
+	icon_state = "fpmaint"
+
+/area/apartments/security_post
+	name = "Security Post"
 	icon_state = "fpmaint"
 
 
