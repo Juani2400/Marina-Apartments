@@ -1,5 +1,5 @@
 /datum/job/assistant
-	title = "Assistant"
+	title = "Guest"
 	flag = ASSISTANT
 	department_flag = CIVILIAN
 	faction = "Station"
@@ -7,8 +7,8 @@
 	spawn_positions = -1
 	supervisors = "absolutely everyone"
 	selection_color = "#dddddd"
-	access = list()			//See /datum/job/assistant/get_access()
-	minimal_access = list()	//See /datum/job/assistant/get_access()
+	access = list()
+	minimal_access = list()
 	alt_titles = list("Technical Assistant","Medical Intern","Research Assistant","Security Cadet")
 
 /datum/job/assistant/equip(var/mob/living/carbon/human/H)

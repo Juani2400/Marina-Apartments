@@ -1,15 +1,15 @@
-//Food
-/datum/job/bartender
-	title = "Bartender"
-	flag = BARTENDER
-	department_flag = CIVILIAN
+// Marina Apartments
+/datum/job/tenant
+	title = "Tenant"
+	flag = TENANT
+	department_flag = ADMINISTRATION
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
-	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
-	minimal_access = list(access_bar)
+	access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
+	minimal_access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
 
 
 	equip(var/mob/living/carbon/human/H)
@@ -38,7 +38,71 @@
 
 		return 1
 
+/datum/job/doorman
+	title = "Doorman"
+	flag = DOORMAN
+	department_flag = MAINTENANCE
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the head of personnel"
+	selection_color = "#dddddd"
+	access = list(access_doorman, access_e2)
+	minimal_access = list(access_doorman, access_e2)
 
+
+	equip(var/mob/living/carbon/human/H)
+		if(!H)	return 0
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket/really_black(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/lawyer/bluejacket(H), slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/device/pda/janitor(H), slot_belt)
+		if(H.backbag == 1)
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
+		else
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
+		return 1
+
+/datum/job/guest
+	title = "Guest"
+	flag = GUEST
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the head of personnel"
+	selection_color = "#dddddd"
+	access = list()
+	minimal_access = list()
+
+
+	equip(var/mob/living/carbon/human/H)
+		if(!H)	return 0
+		switch(H.backbag)
+			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack(H), slot_back)
+			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
+			if(4) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/black(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/device/pda/bar(H), slot_belt)
+
+		if(H.backbag == 1)
+			var/obj/item/weapon/storage/box/survival/Barpack = new /obj/item/weapon/storage/box/survival(H)
+			H.equip_to_slot_or_del(Barpack, slot_r_hand)
+			new /obj/item/ammo_casing/shotgun/beanbag(Barpack)
+			new /obj/item/ammo_casing/shotgun/beanbag(Barpack)
+			new /obj/item/ammo_casing/shotgun/beanbag(Barpack)
+			new /obj/item/ammo_casing/shotgun/beanbag(Barpack)
+		else
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+
+		return 1
+
+// Old
 
 /datum/job/chef
 	title = "Chef"
@@ -267,33 +331,6 @@
 		H.miming = 1
 		return 1
 */
-
-
-/datum/job/janitor
-	title = "Janitor"
-	flag = JANITOR
-	department_flag = CIVILIAN
-	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the head of personnel"
-	selection_color = "#dddddd"
-	access = list(access_janitor, access_maint_tunnels)
-	minimal_access = list(access_janitor, access_maint_tunnels)
-
-
-	equip(var/mob/living/carbon/human/H)
-		if(!H)	return 0
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/janitor(H), slot_w_uniform)
-		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/black(H), slot_shoes)
-		H.equip_to_slot_or_del(new /obj/item/device/pda/janitor(H), slot_belt)
-		if(H.backbag == 1)
-			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
-		else
-			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
-		return 1
-
-
 
 //More or less assistants
 /datum/job/librarian
