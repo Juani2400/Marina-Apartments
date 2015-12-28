@@ -627,84 +627,84 @@ area/shuttle/marina/elevator/groundfloor
 	name = "Apartments"
 	icon_state = "fpmaint"
 
-/area/apartments/house_1
-	name = "House #1"
+/area/apartments/house_1a
+	name = "House A-01"
 	icon_state = "fpmaint"
 
-/area/apartments/house_2
-	name = "House #2"
+/area/apartments/house_2a
+	name = "House A-02"
 	icon_state = "fpmaint"
 
-/area/apartments/house_3
-	name = "House #3"
+/area/apartments/house_3a
+	name = "House A-03"
 	icon_state = "fpmaint"
 
-/area/apartments/house_4
-	name = "House #4"
+/area/apartments/house_4a
+	name = "House A-04"
 	icon_state = "fpmaint"
 
-/area/apartments/house_5
-	name = "House #5"
+/area/apartments/house_5a
+	name = "House A-05"
 	icon_state = "fpmaint"
 
-/area/apartments/house_6
-	name = "House #6"
+/area/apartments/house_1b
+	name = "House B-01"
 	icon_state = "fpmaint"
 
-/area/apartments/house_7
-	name = "House #7"
+/area/apartments/house_2b
+	name = "House B-02"
 	icon_state = "fpmaint"
 
-/area/apartments/house_8
-	name = "House #8"
+/area/apartments/house_3b
+	name = "House B-03"
 	icon_state = "fpmaint"
 
-/area/apartments/house_9
-	name = "House #9"
+/area/apartments/house_4b
+	name = "House B-04"
 	icon_state = "fpmaint"
 
-/area/apartments/house_10
-	name = "House #10"
+/area/apartments/house_1c
+	name = "House C-01"
 	icon_state = "fpmaint"
 
-/area/apartments/house_11
-	name = "House #11"
+/area/apartments/house_2c
+	name = "House C-02"
 	icon_state = "fpmaint"
 
-/area/apartments/house_12
-	name = "House #12"
+/area/apartments/house_3c
+	name = "House C-03"
 	icon_state = "fpmaint"
 
-/area/apartments/house_13
-	name = "House #13"
+/area/apartments/house_4c
+	name = "House C-04"
 	icon_state = "fpmaint"
 
-/area/apartments/house_14
-	name = "House #14"
+/area/apartments/house_5c
+	name = "House C-05"
 	icon_state = "fpmaint"
 
-/area/apartments/house_15
-	name = "House #15"
+/area/apartments/house_6c
+	name = "House C-06"
 	icon_state = "fpmaint"
 
-/area/apartments/house_16
-	name = "House #16"
+/area/apartments/house_7c
+	name = "House C-07"
 	icon_state = "fpmaint"
 
-/area/apartments/house_17
-	name = "House #17"
+/area/apartments/house_8c
+	name = "House C-08"
 	icon_state = "fpmaint"
 
-/area/apartments/house_18
-	name = "House #18"
+/area/apartments/house_9c
+	name = "House C-09"
 	icon_state = "fpmaint"
 
-/area/apartments/house_19
-	name = "House #19"
+/area/apartments/house_10c
+	name = "House C-10"
 	icon_state = "fpmaint"
 
-/area/apartments/house_20
-	name = "House #20"
+/area/apartments/house_11c
+	name = "House C-11"
 	icon_state = "fpmaint"
 
 /area/apartments/house_1d
