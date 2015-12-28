@@ -27,6 +27,7 @@
 		var/area/transit_location = locate(/area/syndicate_station/transit)
 		curr_location.move_contents_to(transit_location)
 		curr_location = transit_location
+		playsound(src.loc, 'sound/music/lift.ogg', 50, 0, 1)
 		sleep(SYNDICATE_SHUTTLE_MOVE_TIME)
 
 	curr_location.move_contents_to(dest_location)
@@ -68,10 +69,8 @@
 		user.set_machine(src)
 
 	if(href_list["groundfloor"])
-		playsound(src.loc, 'sound/music/lift.ogg', 30, 0, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/groundfloor)
 	else if(href_list["upperfloor"])
-		playsound(src.loc, 'sound/music/lift.ogg', 30, 0, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/upperfloor)
 
 	add_fingerprint(usr)
