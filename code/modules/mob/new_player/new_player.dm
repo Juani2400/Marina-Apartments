@@ -26,17 +26,22 @@
 	proc/new_player_panel_proc()
 		var/output = "<div align='center'><B>New Player Options</B>"
 		output +="<hr>"
-		output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];show_preferences=1' style='text-decoration:none'><font face='Calibri' color='green'>Setup Character</font></A></p>"
 
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-			if(!ready)	output += "<p><a href='byond://?src=\ref[src];ready=1'>Declare Ready</A></p>"
-			else	output += "<p><b>You are ready</b> (<a href='byond://?src=\ref[src];ready=2'>Cancel</A>)</p>"
+			output += "<p><font face='Calibri'><b>The game will start soon</b></font></p>"
+			output += "<p><a href='byond://?src=\ref[src]' style='text-decoration:none'><font face='Calibri' color='green'>Refresh</font></A></p>"
 
 		else
-			output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
-			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+			output += "<a href='byond://?src=\ref[src];manifest=1' style='text-decoration:none'><font face='Calibri' color='green'>View the Crew Manifest</font></A><br><br>"
+			if("[src.ckey]" == "davidin")
+				output += "<p><a href='byond://?src=\ref[src];SelectedJob=Doorman' style='text-decoration:none'><font face='Calibri' color='green'>Join Game!</font></A></p>"
+			else if("[src.ckey]" == "juani2400")
+				output += "<p><a href='byond://?src=\ref[src];SelectedJob=Tenant' style='text-decoration:none'><font face='Calibri' color='green'>Join Game!</font></A></p>"
+			else
+				output += "<p><a href='byond://?src=\ref[src];SelectedJob=Guest' style='text-decoration:none'><font face='Calibri' color='green'>Join Game!</font></A></p>"
 
-		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];observe=1' style='text-decoration:none'><font face='Calibri' color='green'>Observe</font></A></p>"
 
 		if(!IsGuestKey(src.key))
 			establish_db_connection()
@@ -332,8 +337,9 @@
 			if(emergency_shuttle.direction == 1 && emergency_shuttle.alert == 1) // Crew transfer initiated
 				dat += "<font color='red'>The station is currently undergoing crew transfer procedures.</font><br>"
 
-		dat += "Choose from the following open positions:<br>"
-		for(var/datum/job/job in job_master.occupations)
+		// Old
+		/*dat += "Choose from the following open positions:<br>"
+		/for(var/datum/job/job in job_master.occupations)
 			if(job && IsJobAvailable(job.title))
 				var/active = 0
 				// Only players with the job assigned and AFK for less than 10 minutes count as active
@@ -341,8 +347,10 @@
 					active++
 				dat += "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions]) (Active: [active])</a><br>"
 
+
 		dat += "</center>"
 		src << browse(dat, "window=latechoices;size=300x640;can_close=1")
+		*/
 
 
 	proc/create_character()

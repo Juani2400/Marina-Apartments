@@ -1,3 +1,20 @@
+// Marina Apartments
+
+var/const/ADMINISTRATION	=(1<<0)
+
+var/const/TENANT			=(1<<0)
+
+
+var/const/MAINTENANCE		=(1<<0)
+
+var/const/DOORMAN			=(1<<0)
+
+
+var/const/CIVILIAN			=(1<<2)
+
+var/const/GUEST				=(1<<0)
+
+// Old
 
 var/const/ENGSEC			=(1<<0)
 
@@ -27,13 +44,12 @@ var/const/ROBOTICIST		=(1<<8)
 var/const/XENOBIOLOGIST		=(1<<9)
 
 
-var/const/CIVILIAN			=(1<<2)
+var/const/CIVILIANOLD		=(1<<2)
 
 var/const/HOP				=(1<<0)
 var/const/BARTENDER			=(1<<1)
 var/const/BOTANIST			=(1<<2)
 var/const/CHEF				=(1<<3)
-var/const/JANITOR			=(1<<4)
 var/const/LIBRARIAN			=(1<<5)
 var/const/QUARTERMASTER		=(1<<6)
 var/const/CARGOTECH			=(1<<7)
@@ -43,6 +59,7 @@ var/const/CHAPLAIN			=(1<<10)
 var/const/CLOWN				=(1<<11)
 var/const/MIME				=(1<<12)
 var/const/ASSISTANT			=(1<<13)
+var/const/JANITOR			=(1<<0)
 
 
 var/list/assistant_occupations = list(

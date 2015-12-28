@@ -1,70 +1,121 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 
-/var/const/access_security = 1 // Security equipment
-/var/const/access_brig = 2 // Brig timers and permabrig
-/var/const/access_armory = 3
-/var/const/access_forensics_lockers= 4
-/var/const/access_medical = 5
-/var/const/access_morgue = 6
-/var/const/access_tox = 7
-/var/const/access_tox_storage = 8
-/var/const/access_genetics = 9
-/var/const/access_engine = 10
-/var/const/access_engine_equip= 11
-/var/const/access_maint_tunnels = 12
-/var/const/access_external_airlocks = 13
-/var/const/access_emergency_storage = 14
-/var/const/access_change_ids = 15
-/var/const/access_ai_upload = 16
-/var/const/access_teleporter = 17
-/var/const/access_eva = 18
-/var/const/access_heads = 19
-/var/const/access_captain = 20
-/var/const/access_all_personal_lockers = 21
-/var/const/access_chapel_office = 22
-/var/const/access_tech_storage = 23
-/var/const/access_atmospherics = 24
-/var/const/access_bar = 25
-/var/const/access_janitor = 26
-/var/const/access_crematorium = 27
-/var/const/access_kitchen = 28
-/var/const/access_robotics = 29
-/var/const/access_rd = 30
+// Marina Apartments
+
+	// Jobs
+
+/var/const/access_tenant = 1
+/var/const/access_doorman = 2
+/var/const/access_nurse = 3
+/var/const/access_guard = 4
+/var/const/access_maintenance_technician = 5
+
+	// Apartments
+
+/var/const/access_a1 = 11
+/var/const/access_a2 = 12
+/var/const/access_a3 = 13
+/var/const/access_a4 = 14
+/var/const/access_a5 = 15
+
+/var/const/access_b1 = 21
+/var/const/access_b2 = 22
+/var/const/access_b3 = 23
+/var/const/access_b4 = 24
+
+/var/const/access_c1 = 31
+/var/const/access_c2 = 32
+/var/const/access_c3 = 33
+/var/const/access_c4 = 34
+/var/const/access_c5 = 35
+/var/const/access_c6 = 36
+/var/const/access_c7 = 37
+/var/const/access_c8 = 38
+/var/const/access_c9 = 39
+/var/const/access_c10 = 310
+/var/const/access_c11 = 311
+
+/var/const/access_d1 = 41
+/var/const/access_d2 = 42
+/var/const/access_d3 = 43
+/var/const/access_d4 = 44
+/var/const/access_d5 = 45
+/var/const/access_d6 = 46
+/var/const/access_d7 = 47
+/var/const/access_d8 = 48
+
+/var/const/access_e1 = 51
+/var/const/access_e2 = 52
+/var/const/access_e3 = 53
+/var/const/access_e4 = 54
+
+
+// Old
+
+/var/const/access_armory = 300
+/var/const/access_medical = 308
+/var/const/access_security = 480
+/var/const/access_forensics_lockers= 400
+/var/const/access_morgue = 600
+/var/const/access_tox = 700
+/var/const/access_tox_storage = 800
+/var/const/access_genetics = 900
+/var/const/access_engine = 100
+/var/const/access_engine_equip= 110
+/var/const/access_maint_tunnels = 120
+/var/const/access_external_airlocks = 130
+/var/const/access_emergency_storage = 140
+/var/const/access_change_ids = 150
+/var/const/access_ai_upload = 160
+/var/const/access_teleporter = 170
+/var/const/access_eva = 180
+/var/const/access_heads = 190
+/var/const/access_captain = 200
+/var/const/access_all_personal_lockers = 210
+/var/const/access_chapel_office = 220
+/var/const/access_tech_storage = 230
+/var/const/access_atmospherics = 240
+/var/const/access_bar = 250
+/var/const/access_crematorium = 270
+/var/const/access_kitchen = 280
+/var/const/access_robotics = 290
+/var/const/access_rd = 300
 /var/const/access_cargo = 31
-/var/const/access_construction = 32
-/var/const/access_chemistry = 33
-/var/const/access_cargo_bot = 34
-/var/const/access_hydroponics = 35
-/var/const/access_manufacturing = 36
-/var/const/access_library = 37
-/var/const/access_lawyer = 38
-/var/const/access_virology = 39
-/var/const/access_cmo = 40
-/var/const/access_qm = 41
-/var/const/access_court = 42
-/var/const/access_clown = 43
-/var/const/access_mime = 44
-/var/const/access_surgery = 45
-/var/const/access_theatre = 46
-/var/const/access_research = 47
-/var/const/access_mining = 48
-/var/const/access_mining_office = 49 //not in use
-/var/const/access_mailsorting = 50
-/var/const/access_mint = 51
-/var/const/access_mint_vault = 52
-/var/const/access_heads_vault = 53
-/var/const/access_mining_station = 54
-/var/const/access_xenobiology = 55
-/var/const/access_ce = 56
-/var/const/access_hop = 57
-/var/const/access_hos = 58
-/var/const/access_RC_announce = 59 //Request console announcements
-/var/const/access_keycard_auth = 60 //Used for events which require at least two people to confirm them
-/var/const/access_tcomsat = 61 // has access to the entire telecomms satellite / machinery
-/var/const/access_gateway = 62
-/var/const/access_sec_doors = 63 // Security front doors
-/var/const/access_psychiatrist = 64 // Psychiatrist's office
-/var/const/access_xenoarch = 65
+/var/const/access_construction = 320
+/var/const/access_chemistry = 330
+/var/const/access_cargo_bot = 340
+/var/const/access_hydroponics = 350
+/var/const/access_manufacturing = 360
+/var/const/access_library = 370
+/var/const/access_lawyer = 380
+/var/const/access_virology = 390
+/var/const/access_cmo = 400
+/var/const/access_qm = 410
+/var/const/access_court = 420
+/var/const/access_clown = 430
+/var/const/access_mime = 440
+/var/const/access_surgery = 450
+/var/const/access_theatre = 460
+/var/const/access_research = 470
+/var/const/access_mining = 480
+/var/const/access_mining_office = 490 //not in use
+/var/const/access_mailsorting = 500
+/var/const/access_mint = 510
+/var/const/access_mint_vault = 520
+/var/const/access_heads_vault = 530
+/var/const/access_mining_station = 540
+/var/const/access_xenobiology = 550
+/var/const/access_ce = 560
+/var/const/access_hop = 570
+/var/const/access_hos = 580
+/var/const/access_RC_announce = 590 //Request console announcements
+/var/const/access_keycard_auth = 600 //Used for events which require at least two people to confirm them
+/var/const/access_tcomsat = 610 // has access to the entire telecomms satellite / machinery
+/var/const/access_gateway = 620
+/var/const/access_sec_doors = 630 // Security front doors
+/var/const/access_psychiatrist = 640 // Psychiatrist's office
+/var/const/access_xenoarch = 650
+/var/const/access_brig = 999 // Brig timers and permabrig
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
@@ -199,7 +250,7 @@
 	            access_external_airlocks, access_change_ids, access_ai_upload,
 	            access_teleporter, access_eva, access_heads, access_captain, access_all_personal_lockers,
 	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
-	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_construction,
+	            access_bar, access_doorman, access_crematorium, access_robotics, access_cargo, access_construction,
 	            access_hydroponics, access_library, access_lawyer, access_virology, access_psychiatrist, access_cmo, access_qm, access_clown, access_mime, access_surgery,
 	            access_theatre, access_research, access_mining, access_mailsorting,
 	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
@@ -226,7 +277,7 @@
 		if(5) //command
 			return list(access_heads, access_RC_announce, access_keycard_auth, access_change_ids, access_ai_upload, access_teleporter, access_eva, access_tcomsat, access_gateway, access_all_personal_lockers, access_heads_vault, access_hop, access_captain)
 		if(6) //station general
-			return list(access_kitchen,access_bar, access_hydroponics, access_janitor, access_chapel_office, access_crematorium, access_library, access_theatre, access_lawyer, access_clown, access_mime)
+			return list(access_kitchen,access_bar, access_hydroponics, access_doorman, access_chapel_office, access_crematorium, access_library, access_theatre, access_lawyer, access_clown, access_mime)
 		if(7) //supply
 			return list(access_mailsorting, access_mining, access_mining_station, access_cargo, access_qm)
 
@@ -280,7 +331,7 @@
 			return "Research Director"
 		if(access_bar)
 			return "Bar"
-		if(access_janitor)
+		if(access_doorman)
 			return "Custodial Closet"
 		if(access_engine)
 			return "Engineering"

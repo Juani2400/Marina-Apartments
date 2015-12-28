@@ -68,10 +68,10 @@
 		user.set_machine(src)
 
 	if(href_list["groundfloor"])
-		playsound(src.loc, 'sound/music/lift.ogg', 30, 1)
+		playsound(src.loc, 'sound/music/lift.ogg', 30, 0, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/groundfloor)
 	else if(href_list["upperfloor"])
-		playsound(src.loc, 'sound/music/lift.ogg', 30, 1)
+		playsound(src.loc, 'sound/music/lift.ogg', 30, 0, 1)
 		syndicate_move_to(/area/shuttle/marina/elevator/upperfloor)
 
 	add_fingerprint(usr)

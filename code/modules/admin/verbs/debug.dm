@@ -1043,13 +1043,13 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		T.zone.air.nitrogen += 450
 		T.zone.air.temperature = 50
 		T.zone.air.update_values()
-				
-				
+
+
 	log_admin("[key_name(usr)] setup the supermatter engine [response == "Setup except coolant" ? "without coolant" : ""]")
 	message_admins("\blue [key_name_admin(usr)] setup the supermatter engine  [response == "Setup except coolant" ? "without coolant": ""]", 1)
 	return
-			
-	
+
+
 
 /client/proc/cmd_debug_mob_lists()
 	set category = "Debug"
