@@ -11,7 +11,7 @@
 	var/lastMove = 0
 
 /obj/machinery/computer/syndicate_station/New()
-	curr_location= locate(/area/shuttle/marina/elevator/groundfloor)
+	curr_location= locate(/area/shuttle/marina/elevator/firstfloor)
 
 
 /obj/machinery/computer/syndicate_station/proc/syndicate_move_to(area/destination as area)
@@ -53,8 +53,8 @@
 
 	var/dat = {"Location: [curr_location]<br>
 	Ready to move[max(lastMove + SYNDICATE_SHUTTLE_COOLDOWN - world.time, 0) ? " in [max(round((lastMove + SYNDICATE_SHUTTLE_COOLDOWN - world.time) * 0.1), 0)] seconds" : ": now"]<br>
-	<a href='?src=\ref[src];groundfloor=1'>Ground floor</a><br>
-	<a href='?src=\ref[src];upperfloor=1'>Upper floor</a>"}
+	<a href='?src=\ref[src];firstfloor=1'>First floor</a><br>
+	<a href='?src=\ref[src];secondfloor=1'>Second floor</a>"}
 
 	user << browse(dat, "window=computer;size=238x144")
 	onclose(user, "computer")
@@ -68,10 +68,10 @@
 	if(in_range(src, user) || istype(user, /mob/living/silicon))
 		user.set_machine(src)
 
-	if(href_list["groundfloor"])
-		syndicate_move_to(/area/shuttle/marina/elevator/groundfloor)
-	else if(href_list["upperfloor"])
-		syndicate_move_to(/area/shuttle/marina/elevator/upperfloor)
+	if(href_list["firstfloor"])
+		syndicate_move_to(/area/shuttle/marina/elevator/firstfloor)
+	else if(href_list["secondfloor"])
+		syndicate_move_to(/area/shuttle/marina/elevator/secondfloor)
 
 	add_fingerprint(usr)
 	updateUsrDialog()

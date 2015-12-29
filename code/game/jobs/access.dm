@@ -52,7 +52,6 @@
 
 // Old
 
-/var/const/access_armory = 300
 /var/const/access_medical = 308
 /var/const/access_security = 480
 /var/const/access_forensics_lockers= 400
@@ -222,7 +221,7 @@
 		return 0
 	return 1
 
-/proc/get_centcom_access(job)
+/* /proc/get_centcom_access(job)
 	switch(job)
 		if("VIP Guest")
 			return list(access_cent_general)
@@ -241,23 +240,13 @@
 		if("BlackOps Commander")
 			return list(access_cent_general, access_cent_thunder, access_cent_specops, access_cent_living, access_cent_storage, access_cent_creed)
 		if("Supreme Commander")
-			return get_all_centcom_access()
+			return get_all_centcom_access() */
 
 /proc/get_all_accesses()
-	return list(access_security, access_sec_doors, access_brig, access_armory, access_forensics_lockers, access_court,
-	            access_medical, access_genetics, access_morgue, access_rd,
-	            access_tox, access_tox_storage, access_chemistry, access_engine, access_engine_equip, access_maint_tunnels,
-	            access_external_airlocks, access_change_ids, access_ai_upload,
-	            access_teleporter, access_eva, access_heads, access_captain, access_all_personal_lockers,
-	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
-	            access_bar, access_doorman, access_crematorium, access_robotics, access_cargo, access_construction,
-	            access_hydroponics, access_library, access_lawyer, access_virology, access_psychiatrist, access_cmo, access_qm, access_clown, access_mime, access_surgery,
-	            access_theatre, access_research, access_mining, access_mailsorting,
-	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
-	            access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch)
+	return list()
 
 /proc/get_all_centcom_access()
-	return list(access_cent_general, access_cent_thunder, access_cent_specops, access_cent_medical, access_cent_living, access_cent_storage, access_cent_teleporter, access_cent_creed, access_cent_captain)
+	return list()
 
 /proc/get_all_syndicate_access()
 	return list(access_syndicate)
@@ -267,19 +256,19 @@
 		if(0)
 			return get_all_accesses()
 		if(1) //security
-			return list(access_sec_doors, access_security, access_brig, access_armory, access_forensics_lockers, access_court, access_hos)
+			return list()
 		if(2) //medbay
-			return list(access_medical, access_genetics, access_morgue, access_chemistry, access_psychiatrist, access_virology, access_surgery, access_cmo)
+			return list()
 		if(3) //research
-			return list(access_research, access_tox, access_tox_storage, access_robotics, access_xenobiology, access_xenoarch, access_rd)
+			return list()
 		if(4) //engineering and maintenance
-			return list(access_construction, access_maint_tunnels, access_engine, access_engine_equip, access_external_airlocks, access_tech_storage, access_atmospherics, access_ce)
+			return list()
 		if(5) //command
-			return list(access_heads, access_RC_announce, access_keycard_auth, access_change_ids, access_ai_upload, access_teleporter, access_eva, access_tcomsat, access_gateway, access_all_personal_lockers, access_heads_vault, access_hop, access_captain)
+			return list()
 		if(6) //station general
-			return list(access_kitchen,access_bar, access_hydroponics, access_doorman, access_chapel_office, access_crematorium, access_library, access_theatre, access_lawyer, access_clown, access_mime)
+			return list()
 		if(7) //supply
-			return list(access_mailsorting, access_mining, access_mining_station, access_cargo, access_qm)
+			return list()
 
 /proc/get_region_accesses_name(var/code)
 	switch(code)
@@ -365,8 +354,6 @@
 			return "Atmospherics"
 		if(access_crematorium)
 			return "Crematorium"
-		if(access_armory)
-			return "Armory"
 		if(access_construction)
 			return "Construction Areas"
 		if(access_kitchen)
@@ -434,7 +421,7 @@
 		if(access_sec_doors)
 			return "Brig"
 
-/proc/get_centcom_access_desc(A)
+/* /proc/get_centcom_access_desc(A)
 	switch(A)
 		if(access_cent_general)
 			return "Code Grey"
@@ -454,6 +441,7 @@
 			return "Code Silver"
 		if(access_cent_captain)
 			return "Code Gold"
+			*/
 
 /proc/get_all_jobs()
 	var/list/all_jobs = list()
