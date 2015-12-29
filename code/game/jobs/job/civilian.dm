@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "the solar goverment"
 	selection_color = "#dddddd"
 	access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
 	minimal_access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
@@ -45,10 +45,10 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "the tenant"
 	selection_color = "#dddddd"
-	access = list(access_doorman, access_e2)
-	minimal_access = list(access_doorman, access_e2)
+	access = list(access_doorman, access_e1)
+	minimal_access = list(access_doorman, access_e1)
 
 
 	equip(var/mob/living/carbon/human/H)
@@ -70,7 +70,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "the personnel of the station"
 	selection_color = "#dddddd"
 	access = list()
 	minimal_access = list()

@@ -78,3 +78,16 @@
 				usr << browse("<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY><TT>[P.info]</TT></BODY></HTML>", "window=[P.name]")
 				onclose(usr, "[P.name]")
 	return
+
+/obj/structure/noticeboard/marina
+	notices = 1
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/marina/New()
+	//add some memos
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Placeholder."
+	P.info = "Placeholder."
+	P.stamped = list(/obj/item/weapon/stamp/rd)
+	P.overlays = list("paper_stamped-marina_apartments")
+	src.contents += P

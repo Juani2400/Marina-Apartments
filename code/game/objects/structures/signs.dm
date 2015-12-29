@@ -295,6 +295,21 @@
 	desc = "A direction sign, pointing out the direction of the Market."
 	icon_state = "direction_market"
 
+/obj/structure/sign/directions/floor1
+	name = "\improper Floor 1"
+	desc = "A direction sign, pointing out which way the first floor access is."
+	icon_state = "direction_1floor"
+
+/obj/structure/sign/directions/floor2
+	name = "\improper Floor 2"
+	desc = "A direction sign, pointing out which way the second floor access is."
+	icon_state = "direction_2floor"
+
+/obj/structure/sign/directions/lift
+	name = "\improper Lift"
+	desc = "A direction sign, pointing out which way the lift access is."
+	icon_state = "direction_lift"
+
 /obj/structure/sign/hallwaysigns/hallway_a
 	name = "\improper 'Amarillo' (A) Hallway"
 	desc = "A sign which shows in which hallway you are. This one shows 'A'."
@@ -364,6 +379,16 @@
 	name = "\improper Advertising Monitor"
 	desc = "A NT advertising monitor."
 	icon_state = "ads_monitor2"
+
+/obj/structure/sign/misc_apartments/floor1sign
+	name = "\improper 'Floor 1"
+	desc = "A sign which indicates the floor you are currently on."
+	icon_state = "floor1"
+
+/obj/structure/sign/misc_apartments/floor2sign
+	name = "\improper 'Floor 2"
+	desc = "A sign which indicates the floor you are currently on."
+	icon_state = "floor2"
 
 /obj/structure/sign/apartment/apartment_1a
 	name = "\improper Apartment A-01"

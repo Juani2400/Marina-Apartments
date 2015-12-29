@@ -316,10 +316,10 @@ area/shuttle/marina/transport/station
 	name = "\improper Marina elevator"
 	icon_state = "shuttle"
 
-area/shuttle/marina/elevator/groundfloor
+area/shuttle/marina/elevator/firstfloor
 	icon_state = "shuttle2"
 
-/area/shuttle/marina/elevator/upperfloor
+/area/shuttle/marina/elevator/secondfloor
 	icon_state = "shuttle"
 
 /area/airtunnel1/      // referenced in airtunnel.dm:759
@@ -625,6 +625,14 @@ area/shuttle/marina/elevator/groundfloor
 //Apartments
 /area/apartments
 	name = "Apartments"
+	icon_state = "fpmaint"
+
+/area/apartments/administration
+	name = "Administration Office and Lobby"
+	icon_state = "fpmaint"
+
+/area/apartments/doorman_office
+	name = "Administration Office and Lobby"
 	icon_state = "fpmaint"
 
 /area/apartments/house_1a
