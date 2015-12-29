@@ -424,8 +424,6 @@ var/global/datum/controller/occupations/job_master
 							new /obj/item/weapon/storage/box/survival(BPK)
 							H.equip_to_slot_or_del(BPK, slot_back,1)
 
-		H << "<B>You are the [alt_title ? alt_title : rank].</B>"
-		H << "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>"
 		if(job.req_admin_notify)
 			H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"
 

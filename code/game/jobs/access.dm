@@ -79,7 +79,7 @@
 /var/const/access_kitchen = 280
 /var/const/access_robotics = 290
 /var/const/access_rd = 300
-/var/const/access_cargo = 31
+/var/const/access_cargo = 465
 /var/const/access_construction = 320
 /var/const/access_chemistry = 330
 /var/const/access_cargo_bot = 340
@@ -255,6 +255,42 @@
 	switch(code)
 		if(0)
 			return get_all_accesses()
+		if(1) //personnel
+			return list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician)
+		if(2) //hallway a
+			return list(access_a1, access_a2, access_a3, access_a4, access_a5)
+		if(3) //hallway b
+			return list(access_b1, access_b2, access_b3, access_b4)
+		if(4) //hallway c
+			return list(access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11)
+		if(5) //hallway d
+			return list(access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8)
+		if(6) //hallway e
+			return list(access_e1, access_e2, access_e3, access_e4)
+
+/proc/get_region_accesses_name(var/code)
+	switch(code)
+		if(0)
+			return "All"
+		if(1) //personnel
+			return "Personnel"
+		if(2) //hallway a
+			return "Hallway A"
+		if(3) //hallway b
+			return "Hallway B"
+		if(4) //hallway c
+			return "Hallway C"
+		if(5) //hallway d
+			return "Hallway D"
+		if(6) //hallway e
+			return "Hallway E"
+
+
+/*
+/proc/get_region_accesses(var/code)
+	switch(code)
+		if(0)
+			return get_all_accesses()
 		if(1) //security
 			return list()
 		if(2) //medbay
@@ -288,7 +324,7 @@
 			return "Station General"
 		if(7) //supply
 			return "Supply"
-
+*/
 
 /proc/get_access_desc(A)
 	switch(A)
@@ -320,8 +356,6 @@
 			return "Research Director"
 		if(access_bar)
 			return "Bar"
-		if(access_doorman)
-			return "Custodial Closet"
 		if(access_engine)
 			return "Engineering"
 		if(access_engine_equip)
@@ -420,6 +454,80 @@
 			return "Gateway"
 		if(access_sec_doors)
 			return "Brig"
+		if(access_tenant)
+			return "Tenant"
+		if(access_doorman)
+			return "Doorman"
+		if(access_nurse)
+			return "Nurse"
+		if(access_guard)
+			return "Guard"
+		if(access_maintenance_technician)
+			return "Maintenance Technician"
+		if(access_a1)
+			return "House A01"
+		if(access_a2)
+			return "House A02"
+		if(access_a3)
+			return "House A03"
+		if(access_a4)
+			return "House A04"
+		if(access_a5)
+			return "House A05"
+		if(access_b1)
+			return "House B01"
+		if(access_b2)
+			return "House B02"
+		if(access_b3)
+			return "House B03"
+		if(access_b4)
+			return "House B04"
+		if(access_c1)
+			return "House C01"
+		if(access_c2)
+			return "House C02"
+		if(access_c3)
+			return "House C03"
+		if(access_c4)
+			return "House C04"
+		if(access_c5)
+			return "House C05"
+		if(access_c6)
+			return "House C06"
+		if(access_c7)
+			return "House C07"
+		if(access_c8)
+			return "House C08"
+		if(access_c9)
+			return "House C09"
+		if(access_c10)
+			return "House C10"
+		if(access_c11)
+			return "House C11"
+		if(access_d1)
+			return "House D01"
+		if(access_d2)
+			return "House D02"
+		if(access_d3)
+			return "House D03"
+		if(access_d4)
+			return "House D04"
+		if(access_d5)
+			return "House D05"
+		if(access_d6)
+			return "House D06"
+		if(access_d7)
+			return "House D07"
+		if(access_d8)
+			return "House D08"
+		if(access_e1)
+			return "House E01"
+		if(access_e2)
+			return "House E02"
+		if(access_e3)
+			return "House E03"
+		if(access_e4)
+			return "House E04"
 
 /* /proc/get_centcom_access_desc(A)
 	switch(A)

@@ -2,11 +2,10 @@
 /datum/job/tenant
 	title = "Tenant"
 	flag = TENANT
-	department_flag = ADMINISTRATION
+	department_flag = PERSONNEL
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the solar goverment"
+	total_positions = -1
+	spawn_positions = -1
 	selection_color = "#dddddd"
 	access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
 	minimal_access = list(access_tenant, access_doorman, access_nurse, access_guard, access_maintenance_technician, access_a1, access_a2, access_a3, access_a4, access_a5, access_b1, access_b2, access_b3, access_b4, access_c1, access_c2, access_c3, access_c4, access_c5, access_c6, access_c7, access_c8, access_c9, access_c10, access_c11, access_d1, access_d2, access_d3, access_d4, access_d5, access_d6, access_d7, access_d8, access_e1, access_e2, access_e3, access_e4)
@@ -41,11 +40,10 @@
 /datum/job/doorman
 	title = "Doorman"
 	flag = DOORMAN
-	department_flag = MAINTENANCE
+	department_flag = PERSONNEL
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the tenant"
+	total_positions = -1
+	spawn_positions = -1
 	selection_color = "#dddddd"
 	access = list(access_doorman, access_e1)
 	minimal_access = list(access_doorman, access_e1)
@@ -63,14 +61,110 @@
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
 		return 1
 
+/datum/job/guard
+	title = "Guard"
+	flag = GUARD
+	department_flag = PERSONNEL
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	selection_color = "#dddddd"
+	access = list(access_guard)
+	minimal_access = list(access_guard)
+
+
+	equip(var/mob/living/carbon/human/H)
+		if(!H)	return 0
+		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/headset_sec(H), slot_l_ear)
+		switch(H.backbag)
+			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security(H), slot_back)
+			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel_sec(H), slot_back)
+			if(4) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/device/pda/security(H), slot_belt)
+		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_s_store)
+		H.equip_to_slot_or_del(new /obj/item/device/flash(H), slot_l_store)
+		if(H.backbag == 1)
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_l_hand)
+		else
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
+		return 1
+
+/datum/job/nurse
+	title = "Nurse"
+	flag = NURSE
+	department_flag = PERSONNEL
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	selection_color = "#dddddd"
+	access = list(access_nurse)
+	minimal_access = list(access_nurse)
+
+
+	equip(var/mob/living/carbon/human/H)
+		if(!H)	return 0
+		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/headset_sec(H), slot_l_ear)
+		switch(H.backbag)
+			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security(H), slot_back)
+			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel_sec(H), slot_back)
+			if(4) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/device/pda/security(H), slot_belt)
+		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_s_store)
+		H.equip_to_slot_or_del(new /obj/item/device/flash(H), slot_l_store)
+		if(H.backbag == 1)
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_l_hand)
+		else
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
+		return 1
+
+
+/datum/job/maintenance_technician
+	title = "Maintenance Technician"
+	flag = MAINTENANCETEC
+	department_flag = PERSONNEL
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	selection_color = "#dddddd"
+	access = list(access_maintenance_technician)
+	minimal_access = list(access_maintenance_technician)
+
+
+	equip(var/mob/living/carbon/human/H)
+		if(!H)	return 0
+		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/headset_sec(H), slot_l_ear)
+		switch(H.backbag)
+			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security(H), slot_back)
+			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel_sec(H), slot_back)
+			if(4) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/device/pda/security(H), slot_belt)
+		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_s_store)
+		H.equip_to_slot_or_del(new /obj/item/device/flash(H), slot_l_store)
+		if(H.backbag == 1)
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_l_hand)
+		else
+			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
+		return 1
+
 /datum/job/guest
 	title = "Guest"
 	flag = GUEST
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the personnel of the station"
+	total_positions = -1
+	spawn_positions = -1
 	selection_color = "#dddddd"
 	access = list()
 	minimal_access = list()
@@ -111,7 +205,6 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_kitchen)
@@ -140,7 +233,6 @@
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
 	minimal_access = list(access_hydroponics, access_morgue) // Removed tox and chem access because STOP PISSING OFF THE CHEMIST GUYS // //Removed medical access because WHAT THE FUCK YOU AREN'T A DOCTOR YOU GROW WHEAT //Given Morgue access because they have a viable means of cloning.
@@ -171,7 +263,6 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station)
 	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station)
@@ -201,7 +292,6 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station)
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting)
@@ -229,7 +319,6 @@
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station)
 	minimal_access = list(access_mining, access_mint, access_mining_station, access_mailsorting)
@@ -267,7 +356,6 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_clown, access_theatre, access_maint_tunnels)
 	minimal_access = list(access_clown, access_theatre)
@@ -299,7 +387,6 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_mime, access_theatre, access_maint_tunnels)
 	minimal_access = list(access_mime, access_theatre)
@@ -340,7 +427,6 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	access = list(access_library, access_maint_tunnels)
 	minimal_access = list(access_library)
@@ -369,7 +455,6 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the captain"
 	selection_color = "#dddddd"
 	access = list(access_lawyer, access_court, access_sec_doors, access_maint_tunnels)
 	minimal_access = list(access_lawyer, access_court, access_sec_doors)
