@@ -23,9 +23,6 @@
 	//How many players have this job
 	var/current_positions = 0
 
-	//Supervisors, who this person answers to directly
-	var/supervisors = ""
-
 	//Sellection screen color
 	var/selection_color = "#ffffff"
 

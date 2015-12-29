@@ -4,7 +4,7 @@
 	name = "Identification Computer"
 	desc = "You can use this to change ID's."
 	icon_state = "id"
-	req_access = list(access_change_ids)
+	req_access = list(access_tenant)
 	circuit = "/obj/item/weapon/circuitboard/card"
 	var/obj/item/weapon/card/id/scan = null
 	var/obj/item/weapon/card/id/modify = null
@@ -16,7 +16,7 @@
 /obj/machinery/computer/card/attackby(O as obj, user as mob)//TODO:SANITY
 	if(istype(O, /obj/item/weapon/card/id))
 		var/obj/item/weapon/card/id/idcard = O
-		if(access_change_ids in idcard.access)
+		if(access_tenant in idcard.access)
 			if(!scan)
 				usr.drop_item()
 				idcard.loc = src
@@ -111,13 +111,9 @@
 		var/counter = 0
 		jobs_all += "<table><tr><td></td><td><b>Command</b></td>"
 
-		jobs_all += "</tr><tr height='20'><td><b>Special</b></font></td>"//Captain in special because he is head of heads ~Intercross21
-		jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=Captain'>Captain</a></td>"
-		jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=Custom'>Custom</a></td>"
-
 		counter = 0
-		jobs_all += "</tr><tr><td><font color='#FFA500'><b>Engineering</b></font></td>"//Orange
-		for(var/job in engineering_positions)
+		jobs_all += "</tr><tr><td><font color='#51514A'><b>Personnel</b></font></td>"
+		for(var/job in personnel)
 			counter++
 			if(counter >= 6)
 				jobs_all += "</tr><tr height='20'><td></td><td></td>"
@@ -125,8 +121,8 @@
 			jobs_all += "<td height='20' weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 		counter = 0
-		jobs_all += "</tr><tr height='20'><td><font color='#008000'><b>Medical</b></font></td>"//Green
-		for(var/job in medical_positions)
+		jobs_all += "</tr><tr height='20'><td><font color='#EEF73D'><b>Hallway A</b></font></td>"
+		for(var/job in hallwaya)
 			counter++
 			if(counter >= 6)
 				jobs_all += "</tr><tr height='20'><td></td><td></td>"
@@ -134,8 +130,8 @@
 			jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 		counter = 0
-		jobs_all += "</tr><tr height='20'><td><font color='#800080'><b>Science</b></font></td>"//Purple
-		for(var/job in science_positions)
+		jobs_all += "</tr><tr height='20'><td><font color='#205688'><b>Hallway B</b></font></td>"
+		for(var/job in hallwayb)
 			counter++
 			if(counter >= 6)
 				jobs_all += "</tr><tr height='20'><td></td><td></td>"
@@ -143,13 +139,33 @@
 			jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 		counter = 0
-		jobs_all += "</tr><tr height='20'><td><font color='#808080'><b>Civilian</b></font></td>"//Grey
-		for(var/job in civilian_positions)
+		jobs_all += "</tr><tr height='20'><td><font color='#F0A141'><b>Hallway C</b></font></td>"
+		for(var/job in hallwayc)
 			counter++
 			if(counter >= 6)
 				jobs_all += "</tr><tr height='20'><td></td><td></td>"
 				counter = 0
 			jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+
+		counter = 0
+		jobs_all += "</tr><tr height='20'><td><font color='#E4A1E7'><b>Hallway D</b></font></td>"
+		for(var/job in hallwayd)
+			counter++
+			if(counter >= 6)
+				jobs_all += "</tr><tr height='20'><td></td><td></td>"
+				counter = 0
+			jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+
+		counter = 0
+		jobs_all += "</tr><tr height='20'><td><font color='#1A693E'><b>Hallway E</b></font></td>"
+
+		for(var/job in hallwaye)
+			counter++
+			if(counter >= 6)
+				jobs_all += "</tr><tr height='20'><td></td><td></td>"
+				counter = 0
+			jobs_all += "<td weight='100'><a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+
 
 		if(istype(src,/obj/machinery/computer/card/centcom))
 			counter = 0
@@ -211,10 +227,10 @@
 				accesses += "<div align='center'><b>Access</b></div>"
 				accesses += "<table style='width:100%'>"
 				accesses += "<tr>"
-				for(var/i = 1; i <= 7; i++)
+				for(var/i = 1; i <= 6; i++)
 					accesses += "<td style='width:14%'><b>[get_region_accesses_name(i)]:</b></td>"
 				accesses += "</tr><tr>"
-				for(var/i = 1; i <= 7; i++)
+				for(var/i = 1; i <= 6; i++)
 					accesses += "<td style='width:14%' valign='top'>"
 					for(var/A in get_region_accesses(i))
 						if(A in modify.access)
@@ -289,10 +305,8 @@
 				if(authenticated)
 					var/access_type = text2num(href_list["access_target"])
 					var/access_allowed = text2num(href_list["allowed"])
-					if(access_type in (istype(src,/obj/machinery/computer/card/centcom)?get_all_centcom_access() : get_all_accesses()))
-						modify.access -= access_type
-						if(access_allowed == 1)
-							modify.access += access_type
+					if(access_allowed == 1)
+						modify.access += access_type
 		if ("assign")
 			if (authenticated)
 				var/t1 = href_list["assign_target"]

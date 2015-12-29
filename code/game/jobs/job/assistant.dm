@@ -1,11 +1,10 @@
 /datum/job/assistant
-	title = "Guest"
+	title = "Assistant"
 	flag = ASSISTANT
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "absolutely everyone"
 	selection_color = "#dddddd"
 	access = list()
 	minimal_access = list()
